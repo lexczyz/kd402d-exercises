@@ -8,17 +8,33 @@ const middleNote = "e4";
 const topNote = "g4";
 
 function exercise7(start) {
-  synth.triggerAttackRelease(bottomNote, "2n", start);
-  synth.triggerAttackRelease(middleNote, "2n", start);
-  synth.triggerAttackRelease(topNote, "2n", start);
+  chordSynth.triggerAttackRelease(bottomNote, "2n", start);
+  chordSynth.triggerAttackRelease(middleNote, "2n", start);
+  chordSynth.triggerAttackRelease(topNote, "2n", start);
 }
 
 // TODO 7a: play exercise 7 as it is. How many notes do you hear? Read the red error in the console.
+
+//Uncaught (in promise) Error: Start time must be strictly greater than previous start time
+
 // TODO 7b: in exercise7, change synth to chordSynth in all three calls. Play again.
+
+// Done
+
 // TODO 7c: glue the three notes into one string, with a space between each, and log it:
 //            const chord = bottomNote + " " + middleNote + " " + topNote;
+
+const chord = bottomNote + " " + middleNote + " " + topNote;
+
 // TODO 7d: log chord.toUpperCase(), then chord.length. Predict the length first: do the spaces count?
+
+console.log("Exercise 7: " + chord);
+console.log("Exercise 7: " + chord.toUpperCase());
+console.log("Exercise 7: the chord is " + chord.length + " characters long");
+
 // TODO 7e: log chord one last time. Has toUpperCase changed it?
+
+console.log("Exercise 7: chord is still " + chord);
 
 // ---------- You don't need to change anything below this line ----------
 
